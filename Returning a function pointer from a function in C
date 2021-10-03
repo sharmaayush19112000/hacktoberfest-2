@@ -1,0 +1,23 @@
+// C program for the above approach
+#include <stdio.h>
+
+// Function to add the value 10 to
+// the variable a
+void demo(int* a) { *a += 10; }
+
+// Driver Code
+int main()
+{
+	int num = 20;
+
+	// ptr contains address of demo
+	// function or void
+	void (*ptr)(int*) = &demo;
+
+	// or (*ptr)(&num);
+	ptr(&num);
+
+	printf("%d", num);
+
+	return 0;
+}
